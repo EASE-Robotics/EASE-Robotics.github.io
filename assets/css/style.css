@@ -283,7 +283,7 @@ thead tr { background: var(--plum); color: #ffffff; text-align: left; }
 th { padding: 16px 24px; font-weight: 600; }
 td { padding: 16px 24px; }
 tbody tr:nth-child(even) { background: #fafafa; }
-.rank, .score { font-weight: 700; color: var(--plum); }
+.rank, .score { font-weight: 600; color: var(--plum); }
 .num { text-align: right; white-space: nowrap; }
 .team-name { font-weight: 500; }
 .school { color: var(--faint); }
@@ -311,7 +311,7 @@ tbody tr:nth-child(even) { background: #fafafa; }
 .kit-section h3 { font-size: 16px; margin: 0 0 16px; }
 .checklist { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; }
 .checklist li { display: flex; gap: 10px; font-size: 14.5px; color: var(--muted); line-height: 1.45; }
-.checklist li::before { content: "✓"; color: #16a34a; font-weight: 700; }
+.checklist li::before { content: "✓"; color: #16a34a; font-weight: 600; }
 .muted { color: var(--faint); font-size: 14px; line-height: 1.6; }
 .muted-sm { color: #888; font-size: 13px; margin: 12px 0 0; }
 
