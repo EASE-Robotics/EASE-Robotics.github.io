@@ -86,6 +86,75 @@
     });
   }
 
+  function formatEventDate(dateStr) {
+    const d = new Date(`${dateStr}T00:00:00`);
+    if (isNaN(d)) return dateStr;
+    return d.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" });
+  }
+
+  function buildEventCard(e) {
+    const card = document.createElement("article");
+    card.className = "card";
+
+    const body = document.createElement("div");
+    body.className = "card-body";
+
+    const meta = document.createElement("div");
+    meta.className = "card-meta";
+    const dateSpan = document.createElement("span");
+    dateSpan.className = "event-date";
+    dateSpan.textContent = formatEventDate(e.date);
+    meta.appendChild(dateSpan);
+    if (e.location) {
+      const locSpan = document.createElement("span");
+      locSpan.textContent = e.location;
+      meta.appendChild(locSpan);
+    }
+
+    const h3 = document.createElement("h3");
+    h3.textContent = e.title || "Untitled event";
+
+    const p = document.createElement("p");
+    p.textContent = e.description || "";
+
+    body.append(meta, h3, p);
+    card.appendChild(body);
+    return card;
+  }
+
+  // Only events today or later are shown, soonest first — past events just
+  // fall off on their own without needing to be deleted from the JSON.
+  async function renderEvents() {
+    const root = document.getElementById("events");
+    if (!root) return;
+
+    let rows;
+    try {
+      const res = await fetch("data/events.json", { cache: "no-cache" });
+      if (!res.ok) throw new Error(res.statusText);
+      rows = await res.json();
+    } catch (err) {
+      root.innerHTML = '<p class="empty">Couldn’t load events. Please try again later.</p>';
+      return;
+    }
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const upcoming = (Array.isArray(rows) ? rows : [])
+      .filter((e) => !e.date || new Date(`${e.date}T00:00:00`) >= today)
+      .sort((a, b) => (a.date || "").localeCompare(b.date || ""));
+
+    if (upcoming.length === 0) {
+      root.innerHTML = '<p class="empty">No upcoming events yet — check back soon!</p>';
+      return;
+    }
+
+    const grid = document.createElement("div");
+    grid.className = "card-grid";
+    upcoming.forEach((e) => grid.appendChild(buildEventCard(e)));
+    root.replaceChildren(grid);
+  }
+
   // Graded teams first (score high → low), ungraded teams at the bottom.
   function sortRankings(rows) {
     return rows.slice().sort((a, b) => {
@@ -152,4 +221,5 @@
   renderFooter();
   wireForms();
   renderRankings();
+  renderEvents();
 })();

@@ -11,10 +11,11 @@ It's plain HTML, CSS, and JavaScript, so there's no build step. Anything pushed 
 | File | Page |
 |---|---|
 | `index.html` | Home |
-| `tutorials.html` | PDF guides and video tutorials |
-| `kit.html` | Starter kit contents and the kit request button |
+| `about.html` | About Us |
 | `compete.html` | How to participate: register team → request kit → submit video (hidden from the navbar until a form link is set) |
-| `rankings.html` | Leaderboard, built from `data/rankings.json` |
+| `tutorials.html` | PDF guides and video tutorials (not linked from the navbar) |
+| `kit.html` | Starter kit contents and the kit request button (not linked from the navbar) |
+| `rankings.html` | Leaderboard, built from `data/rankings.json` (not linked from the navbar) |
 
 The navbar and footer are shared. They live in `assets/js/site.js`, and styles are in `assets/css/style.css`.
 
@@ -49,6 +50,17 @@ Edit `data/rankings.json`. Use `"score": null` for a team whose video hasn't bee
 ```
 
 An empty list (`[]`) shows "No submissions yet".
+
+### Update upcoming events
+Edit `data/events.json`, shown on the home page. `date` must be `YYYY-MM-DD`. Events are sorted soonest-first, and anything whose date has already passed just stops showing up on its own — no need to delete old entries.
+
+```json
+[
+  { "title": "Intro Workshop", "date": "2026-10-18", "location": "Lincoln Middle School", "description": "A free hands-on session for teams new to the kit." }
+]
+```
+
+An empty list (`[]`) shows "No upcoming events yet".
 
 ### Publish tutorial PDFs
 Put the file in `assets/pdf/`. Then in `tutorials.html`, replace that card's disabled button with the link shown in the HTML comment above it.
