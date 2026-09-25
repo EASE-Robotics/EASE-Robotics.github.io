@@ -5,10 +5,8 @@
 (function () {
   const NAV_LINKS = [
     { href: "index.html", label: "Home" },
-    { href: "tutorials.html", label: "Tutorials" },
-    { href: "kit.html", label: "Kit" },
+    { href: "about.html", label: "About" },
     { href: "compete.html", label: "Compete", needs: "any" },
-    { href: "rankings.html", label: "Rankings" },
   ];
 
   function currentPage() {
