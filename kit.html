@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kit — EASE Robotics</title>
+  <meta name="description" content="The free EASE Robotics starter kit for registered teams.">
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="site-nav"></div>
+
+  <main>
+    <div class="container page" style="max-width:860px">
+      <header class="page-head">
+        <h1>Competition Kit</h1>
+        <p>Each registered team receives one free robotics kit to build their competition robot.</p>
+      </header>
+
+      <div class="kit-card">
+        <div class="kit-head">
+          <div>
+            <h2>EASE Robotics Starter Kit</h2>
+            <p>Everything your team needs to build and compete</p>
+          </div>
+          <div class="kit-price"><strong>Free</strong><span>1 per team</span></div>
+        </div>
+        <img class="kit-img" src="assets/img/ease_robot_field_rendered.jpeg" alt="EASE Robotics drive-base chassis kit render">
+        <div class="kit-section">
+          <h3>What&rsquo;s included</h3>
+          <ul class="checklist">
+              <li>Arduino-compatible microcontroller board</li>
+              <li>Dual H-bridge motor driver (L298N)</li>
+              <li>2× DC gear motors with wheels</li>
+              <li>Ultrasonic distance sensor (HC-SR04)</li>
+              <li>Line-following IR sensor array</li>
+              <li>9V battery holder + USB power cable</li>
+              <li>Chassis frame with hardware</li>
+              <li>Jumper wires and breadboard</li>
+          </ul>
+        </div>
+        <div class="kit-section" data-needs="requestKit">
+          <p class="muted">Kits are limited and given out first come, first served to registered teams. Register your team first, then request your kit.</p>
+          <div class="btn-row" style="margin-top:16px">
+            <a class="btn btn-plum" data-form="requestKit">Request Free Kit</a>
+            <a class="btn btn-outline" style="border-color:var(--plum);color:var(--plum)" href="compete.html">How to participate</a>
+          </div>
+          <p class="muted-sm">We&rsquo;ll email your team contact when your kit is approved and again when it ships.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
