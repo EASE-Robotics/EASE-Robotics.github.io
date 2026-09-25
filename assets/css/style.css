@@ -3,7 +3,8 @@
 :root {
   --plum: #5C1451;
   --plum-dark: #4a1041;
-  --cream: #F0F0C9;
+  --peach: #ffab40;
+  --peach-dark: #d99136;
   --ink: #111111;
   --muted: #444444;
   --faint: #666666;
@@ -30,7 +31,7 @@ body {
 
 main { flex: 1; }
 
-::selection { background: var(--plum); color: var(--cream); }
+::selection { background: var(--plum); color: var(--peach); }
 
 img { max-width: 100%; }
 
@@ -58,8 +59,8 @@ h1, h2, h3 { font-family: var(--display); letter-spacing: -0.01em; }
   cursor: pointer;
   transition: background 0.15s, opacity 0.15s;
 }
-.btn-cream { background: var(--cream); color: var(--plum); }
-.btn-cream:hover { background: #e6e6b8; }
+.btn-peach { background: var(--peach); color: var(--plum); }
+.btn-peach:hover { background: var(--peach-dark); }
 .btn-outline { border-color: #ffffff; color: #ffffff; background: transparent; }
 .btn-outline:hover { background: rgba(255, 255, 255, 0.1); }
 .btn-plum { background: var(--plum); color: #ffffff; }
@@ -143,7 +144,7 @@ h1, h2, h3 { font-family: var(--display); letter-spacing: -0.01em; }
   display: inline-block;
   padding: 6px 14px;
   border-radius: 999px;
-  background: var(--cream);
+  background: var(--peach);
   color: var(--plum);
   font-size: 13px;
   font-weight: 600;
@@ -198,7 +199,7 @@ h1, h2, h3 { font-family: var(--display); letter-spacing: -0.01em; }
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--cream);
+  color: var(--peach);
 }
 .highlight-title { font-family: var(--display); font-weight: 600; font-size: 16.5px; margin-bottom: 8px; }
 .highlight-desc { font-size: 14px; line-height: 1.55; color: var(--muted); }
@@ -330,7 +331,7 @@ tbody tr:nth-child(even) { background: #fafafa; }
   height: 56px;
   border-radius: 14px;
   background: var(--plum);
-  color: var(--cream);
+  color: var(--peach);
   font-family: var(--display);
   font-weight: 700;
   font-size: 24px;
