@@ -55,6 +55,8 @@
     slot.outerHTML = `
       <footer class="footer">
         EASE Robotics Competition &mdash; a program for student engineers.
+        <br>
+        Contact us at <a href="mailto:ease.robotics@gmail.com">ease.robotics@gmail.com</a>
       </footer>`;
   }
 
