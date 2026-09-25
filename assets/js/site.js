@@ -29,8 +29,7 @@
       <nav class="nav">
         <div class="nav-inner">
           <a class="brand" href="index.html">
-            <span class="brand-mark"></span>
-            <span class="brand-name">EASE Robotics</span>
+            <img class="brand-logo" src="assets/img/Colored_full_logo.png" alt="EASE Robotics">
           </a>
           <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
