@@ -1,5 +1,9 @@
 # TODO
 
+## Robot Olympics thank-you banner (home page)
+- [x] Replace the dummy feedback form link in `index.html` with the real one
+- [ ] Remove the `THANK-YOU BANNER` section from `index.html` once feedback collection is over
+
 ## Google Forms (sign-up, kits, submissions)
 Everything that depends on these forms is hidden on the live site until its link is filled in, so each form can go live on its own.
 

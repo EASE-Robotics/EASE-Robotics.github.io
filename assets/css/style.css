@@ -130,6 +130,27 @@ h1, h2, h3 { font-family: var(--display); letter-spacing: -0.01em; }
 
 /* ─── Landing ────────────────────────────────────────────────────────────── */
 
+.thanks { background: var(--peach); border-bottom: 1px solid var(--peach-dark); padding: 28px 48px; }
+.thanks-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+.thanks-tag {
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--plum);
+  margin-bottom: 6px;
+}
+.thanks h2 { font-size: 24px; font-weight: 700; color: var(--plum); margin: 0 0 6px; }
+.thanks p { margin: 0; font-size: 15.5px; line-height: 1.6; color: var(--muted); max-width: 680px; }
+.thanks-btn { flex-shrink: 0; font-size: 16.5px; padding: 16px 30px; box-shadow: 0 6px 18px rgba(92, 20, 81, 0.25); }
+
 .hero { background: var(--plum); padding: 96px 48px 0; overflow: hidden; }
 .hero-grid {
   max-width: 1180px;
@@ -385,6 +406,11 @@ tbody tr:nth-child(even) { background: #fafafa; }
   .nav.open .nav-links { display: flex; }
   .nav-links a:not(.btn) { padding: 12px 0; border-bottom: 1px solid #f2f2f2; }
   .nav-links .btn { margin-top: 14px; text-align: center; }
+
+  .thanks { padding: 24px 20px; }
+  .thanks-inner { flex-direction: column; align-items: stretch; gap: 18px; }
+  .thanks h2 { font-size: 20px; }
+  .thanks-btn { text-align: center; }
 
   .hero { padding: 56px 20px 0; }
   .hero-grid { grid-template-columns: 1fr; gap: 8px; }
